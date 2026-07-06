@@ -7,25 +7,26 @@
 
 :root {
   /* ---- color ---- */
-  --bg:          #FAF6F0;   /* warm ivory */
-  --bg-alt:      #F2EADE;   /* deeper warm sand (alt sections) */
+  /* Navy + gold brand — matches Dr. Abunar's Instagram identity (NHSC-inspired). */
+  --bg:          #FAF8F4;   /* soft cream */
+  --bg-alt:      #EEF1F7;   /* pale cool navy tint (alt sections) */
   --surface:     #FFFFFF;
-  --ink:         #201C19;   /* warm near-black */
-  --ink-soft:    #4C443C;
-  --muted:       #7A6F64;   /* warm taupe */
-  --line:        #E6DBCC;   /* warm hairline */
-  --line-strong: #D8CBB6;
+  --ink:         #14233A;   /* deep navy ink */
+  --ink-soft:    #3A4657;
+  --muted:       #6B7484;   /* cool slate */
+  --line:        #E4E7EE;   /* cool hairline */
+  --line-strong: #CFD5E1;
 
-  --primary:      #2F4A40;  /* deep evergreen */
-  --primary-dark: #223A32;
-  --primary-tint: #E4ECE7;  /* pale green wash */
+  --primary:      #0B2545;  /* deep navy */
+  --primary-dark: #081A33;
+  --primary-tint: #E9EEF5;  /* pale navy wash */
 
-  --accent:       #B08640;  /* brushed gold */
-  --accent-dark:  #97702F;
-  --accent-tint:  #F0E6D2;
+  --accent:       #D4A537;  /* gold (decorative: rules, fills, borders) */
+  --accent-dark:  #916E1C;  /* darker gold for legible text on cream */
+  --accent-tint:  #F7EDCF;
 
-  --blush:        #E7D3CB;  /* soft warm blush */
-  --blush-deep:   #C99A8B;
+  --blush:        #F0CF7A;  /* soft gold-light (warm gradients + on-navy accents) */
+  --blush-deep:   #CBA24A;  /* muted gold */
 
   /* ---- type ---- */
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
