@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Reel Brand Kit (rough draft) — Dr. Bayan Abunar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0B2545; --navy-deep:#06152B; --gold:#D4A537; --gold-lt:#F0CF7A;
+      --cream:#FAF8F4; --serif:"Fraunces",Georgia,serif; --sans:"Mulish",system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--navy-deep);color:#E7EDF5;font-family:var(--sans);
+      -webkit-font-smoothing:antialiased}
+    .wrap{max-width:1080px;margin-inline:auto;padding:clamp(28px,5vw,56px) clamp(20px,5vw,44px)}
+    .lbl{font-weight:800;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-lt);
+      display:inline-flex;align-items:center;gap:10px;margin:0 0 14px}
+    .lbl::before{content:"";width:26px;height:1.5px;background:var(--gold)}
+    h1{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5vw,50px);margin:0 0 14px;color:#fff;line-height:1.08}
+    h1 i{color:var(--gold-lt);font-weight:400}
+    .intro-copy{max-width:60ch;color:#AFBFD6;font-size:clamp(16px,2vw,18px);line-height:1.6}
+
+    .stage{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,36px);
+      margin-top:clamp(34px,5vw,56px)}
+    .col{display:flex;flex-direction:column;align-items:center;gap:16px}
+    .cap-lbl{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8FA1BC}
+    .cap-lbl b{color:var(--gold-lt)}
+
+    /* phone frame */
+    .phone{width:100%;max-width:280px;aspect-ratio:9/16;border-radius:30px;position:relative;
+      overflow:hidden;background:var(--navy);box-shadow:0 24px 60px -20px rgba(0,0,0,.7);
+      border:1px solid rgba(240,207,122,.16)}
+    .screen{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:22px}
+
+    /* ---- INTRO STING ---- */
+    .intro{background:radial-gradient(130% 80% at 50% 24%,rgba(240,207,122,.14),transparent 62%),var(--navy)}
+    .intro .stack{display:flex;flex-direction:column;align-items:center;gap:14px}
+    .mono{width:56px;height:56px;border-radius:14px;background:var(--navy-deep);
+      border:1px solid rgba(240,207,122,.5);display:grid;place-items:center}
+    .mono span{font-family:var(--serif);font-weight:600;color:#F3EFE8;font-size:24px;position:relative}
+    .mono span::after{content:"";position:absolute;left:2px;right:2px;bottom:-5px;height:2px;background:var(--gold);border-radius:2px}
+    .gline{width:120px;height:2px;background:var(--gold);transform-origin:center;border-radius:2px}
+    .iname{font-family:var(--serif);font-size:26px;color:#fff;line-height:1.1}
+    .iname i{color:var(--gold-lt);font-weight:400}
+    .itag{font-weight:700;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lt)}
+
+    .mono{animation:rise 6s ease-in-out infinite}
+    .gline{animation:draw 6s ease-in-out infinite}
+    .iname{animation:rise2 6s ease-in-out infinite}
+    .itag{animation:rise3 6s ease-in-out infinite}
+    @keyframes draw{0%,4%{transform:scaleX(0);opacity:0}12%{opacity:1}22%,84%{transform:scaleX(1);opacity:1}95%,100%{transform:scaleX(1);opacity:0}}
+    @keyframes rise{0%,14%{opacity:0;transform:translateY(12px)}26%,84%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(-6px)}}
+    @keyframes rise2{0%,30%{opacity:0;transform:translateY(12px)}42%,84%{opacity:1;transform:translateY(0)}95%,100%{opacity:0}}
+    @keyframes rise3{0%,46%{opacity:0;transform:translateY(10px)}58%,84%{opacity:1;transform:translateY(0)}95%,100%{opacity:0}}
+
+    /* ---- CAPTION STYLE ---- */
+    .capbg{background:linear-gradient(160deg,#1b3358,#0b2545 70%)}
+    .capbg::before{content:"";position:absolute;inset:0;
+      background:radial-gradient(60% 40% at 50% 34%,rgba(255,255,255,.06),transparent)}
+    .subject{position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);
+      width:120px;height:120px;border-radius:50%;
+      background:linear-gradient(160deg,#33507d,#20406c);opacity:.9}
+    .cap{position:absolute;left:14px;right:14px;bottom:64px;display:flex;flex-wrap:wrap;
+      justify-content:center;gap:6px 7px}
+    .cap span{font-family:var(--sans);font-weight:800;font-size:19px;color:#EAF0F7;
+      padding:2px 6px;border-radius:7px;line-height:1.15;animation:hl 3.6s infinite}
+    .cap span:nth-child(1){animation-delay:0s}
+    .cap span:nth-child(2){animation-delay:.45s}
+    .cap span:nth-child(3){animation-delay:.9s}
+    .cap span:nth-child(4){animation-delay:1.35s}
+    .cap span:nth-child(5){animation-delay:1.8s}
+    .cap span:nth-child(6){animation-delay:2.25s}
+    @keyframes hl{0%,100%{background:transparent;color:#EAF0F7;transform:translateY(0)}
+      6%,15%{background:var(--gold);color:#0B2545;transform:translateY(-2px)}}
+    .cap-hint{position:absolute;left:0;right:0;bottom:26px;text-align:center;font-size:10.5px;
+      letter-spacing:.12em;text-transform:uppercase;color:rgba(240,207,122,.7);font-weight:700}
+
+    /* ---- OUTRO ---- */
+    .outro{background:radial-gradient(120% 70% at 50% 80%,rgba(240,207,122,.16),transparent 60%),var(--navy)}
+    .outro .stack{display:flex;flex-direction:column;align-items:center;gap:16px}
+    .otitle{font-family:var(--serif);font-size:25px;color:#fff;line-height:1.15}
+    .otitle i{color:var(--gold-lt);font-weight:400;font-style:italic}
+    .handle{font-weight:800;letter-spacing:.02em;color:var(--gold-lt);font-size:15px}
+    .follow{background:var(--gold);color:#241a06;font-weight:800;font-size:14px;
+      padding:11px 26px;border-radius:999px;animation:pulse 2.4s ease-in-out infinite}
+    @keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(240,207,122,.4)}
+      50%{transform:scale(1.05);box-shadow:0 0 0 10px rgba(240,207,122,0)}}
+
+    .notes{margin-top:clamp(38px,5vw,60px);background:rgba(255,255,255,.04);
+      border:1px solid rgba(240,207,122,.18);border-radius:16px;padding:clamp(22px,3vw,30px)}
+    .notes h2{font-family:var(--serif);font-weight:500;font-size:22px;color:#fff;margin:0 0 14px}
+    .notes ul{margin:0;padding-left:20px;color:#C2CFE2;font-size:15px;line-height:1.7}
+    .notes b{color:var(--gold-lt)}
+
+    @media(max-width:760px){.stage{grid-template-columns:1fr;justify-items:center}
+      .phone{max-width:300px}}
+    @media(prefers-reduced-motion:reduce){
+      .mono,.gline,.iname,.itag,.cap span,.follow{animation:none!important;opacity:1!important;transform:none!important}
+      .gline{transform:scaleX(1)!important}
+      .cap span:nth-child(3){background:var(--gold);color:#0B2545}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="lbl">Reel Brand Kit &middot; rough draft v1</p>
+    <h1>Her Reels, <i>unmistakably hers.</i></h1>
+    <p class="intro-copy">A consistent 2-second intro, a signature caption style, and a follow outro &mdash; so every video reads as one brand the moment it starts. This is a live motion preview to react to; the final versions get rebuilt as real video files (MP4) for dropping into CapCut.</p>
+
+    <div class="stage">
+      <!-- INTRO -->
+      <div class="col">
+        <div class="phone">
+          <div class="screen intro">
+            <div class="stack">
+              <div class="mono"><span>BA</span></div>
+              <div class="gline"></div>
+              <div class="iname">Bayan Abunar, <i>MD</i></div>
+              <div class="itag">OB-GYN &middot; Boy Mom &middot; NHSC</div>
+            </div>
+          </div>
+        </div>
+        <div class="cap-lbl"><b>Intro sting</b> &nbsp;~2s open</div>
+      </div>
+
+      <!-- CAPTION STYLE -->
+      <div class="col">
+        <div class="phone">
+          <div class="screen capbg">
+            <div class="subject"></div>
+            <div class="cap">
+              <span>This</span><span>is</span><span>the</span><span>honest</span><span>version</span><span>&mdash;</span>
+            </div>
+            <div class="cap-hint">Word-by-word &middot; gold highlight</div>
+          </div>
+        </div>
+        <div class="cap-lbl"><b>Caption style</b> &nbsp;on-brand subtitles</div>
+      </div>
+
+      <!-- OUTRO -->
+      <div class="col">
+        <div class="phone">
+          <div class="screen outro">
+            <div class="stack">
+              <div class="mono"><span>BA</span></div>
+              <div class="otitle">Follow for the <i>honest version</i></div>
+              <div class="handle">@drbayanabunar</div>
+              <div class="follow">Follow</div>
+            </div>
+          </div>
+        </div>
+        <div class="cap-lbl"><b>Outro card</b> &nbsp;follow CTA</div>
+      </div>
+    </div>
+
+    <div class="notes">
+      <h2>What this is &amp; what's next</h2>
+      <ul>
+        <li><b>This is a motion mockup</b> (HTML/CSS) so you can approve the look and feel fast &mdash; colors, type, timing, animation.</li>
+        <li><b>Next step:</b> rebuild the approved intro/outro as actual <b>MP4 files</b> (via HyperFrames) plus a CapCut caption preset, so Bayan just drops them onto every Reel &mdash; zero design work per video.</li>
+        <li><b>Adjustable:</b> timing (faster/slower), whether the tagline reads "NHSC Scholar," add a subtle sound, or swap the monogram for her photo.</li>
+        <li><b>Consistent by design:</b> same navy, same gold, same Fraunces &mdash; matches the website and the brand guide exactly.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
