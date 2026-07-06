@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Instagram Launch Plan — Dr. Bayan Abunar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0B2545; --navy-deep:#081A33; --gold:#D4A537; --gold-txt:#916E1C;
+      --gold-lt:#F0CF7A; --cream:#FAF8F4; --pale:#EEF1F7; --ink:#14233A;
+      --slate:#6B7484; --line:#DFE3EC; --line-strong:#CFD5E1;
+      --serif:"Fraunces",Georgia,serif; --sans:"Mulish",system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);
+      font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:960px;margin-inline:auto;padding-inline:clamp(20px,5vw,44px)}
+    h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;margin:0;letter-spacing:-.01em}
+    p{margin:0}
+    a{color:var(--gold-txt)}
+    .lbl{font-weight:800;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-txt);
+      display:inline-flex;align-items:center;gap:10px}
+    .lbl::before{content:"";width:26px;height:1.5px;background:var(--gold)}
+
+    .cover{background:var(--navy);color:#F3EFE8;position:relative;overflow:hidden}
+    .cover::after{content:"";position:absolute;right:-10%;top:-40%;width:60%;height:180%;
+      background:radial-gradient(closest-side,rgba(240,207,122,.2),transparent);pointer-events:none}
+    .cover .wrap{padding-block:clamp(46px,7vw,80px);position:relative;z-index:1}
+    .cover .lbl{color:var(--gold-lt)}.cover .lbl::before{background:var(--gold)}
+    .cover h1{font-size:clamp(32px,5.5vw,54px);color:#fff;margin:12px 0 16px}
+    .cover h1 i{color:var(--gold-lt);font-weight:400}
+    .cover .sub{font-size:clamp(17px,2.2vw,20px);color:#C9D3E4;max-width:56ch}
+
+    section{padding-block:clamp(36px,5.5vw,60px);border-bottom:1px solid var(--line)}
+    .head{margin-bottom:26px}
+    .head h2{font-size:clamp(24px,3.6vw,34px);margin-top:12px}
+    .head p{color:var(--slate);margin-top:8px;max-width:62ch}
+
+    .quote{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.6vw,24px);color:var(--navy);
+      border-left:3px solid var(--gold);padding-left:22px;margin:0}
+
+    .callout{background:var(--pale);border-radius:14px;padding:22px 26px;border:1px solid var(--line)}
+    .callout h3{font-size:19px;margin-bottom:8px}
+    .callout p{color:var(--ink)}
+    .callout .em{color:var(--gold-txt);font-weight:700}
+
+    /* pillars */
+    .pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .pillar{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+    .pillar .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+    .pillar h3{font-size:18px}
+    .pct{font-family:var(--sans);font-weight:800;font-variant-numeric:tabular-nums;color:var(--gold-txt);font-size:15px}
+    .pillar p{color:var(--slate);font-size:14.5px;margin-top:8px}
+
+    /* checklist */
+    .check{list-style:none;margin:0;padding:0}
+    .check li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line);cursor:pointer;user-select:none}
+    .check li:first-child{border-top:none}
+    .box{flex:none;width:22px;height:22px;border-radius:6px;border:2px solid var(--line-strong);
+      margin-top:1px;display:grid;place-items:center;transition:background .15s,border-color .15s}
+    .check li.done .box{background:var(--gold);border-color:var(--gold)}
+    .box::after{content:"";color:#241a06;font-weight:800;font-size:14px;line-height:1}
+    .check li.done .box::after{content:"\2713"}
+    .txt{font-size:15.5px}
+    .txt b{color:var(--navy)}
+    .check li.done .txt{color:var(--slate);text-decoration:line-through}
+    .mono-inline{font-family:var(--sans);background:var(--pale);border:1px solid var(--line);
+      border-radius:5px;padding:1px 6px;font-size:13px;color:var(--navy)}
+
+    /* weeks */
+    .weeks{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .week{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+    .week .theme{color:var(--gold-txt);font-weight:800;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+    .week h3{font-size:19px;margin:4px 0 12px}
+    .post{display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--line)}
+    .post:first-of-type{border-top:none}
+    .day{flex:none;width:38px;font-weight:800;font-size:11px;letter-spacing:.05em;color:var(--gold-txt);text-transform:uppercase;padding-top:3px}
+    .post .p{font-size:14.5px;line-height:1.5}
+    .post .p b{color:var(--navy)}
+    .story{margin-top:14px;font-size:13px;color:var(--slate);background:var(--pale);border-radius:8px;padding:9px 13px}
+    .story b{color:var(--gold-txt)}
+
+    ul.clean{list-style:none;margin:0;padding:0}
+    ul.clean li{padding:9px 0 9px 26px;position:relative;font-size:15.5px}
+    ul.clean li::before{content:"";position:absolute;left:0;top:17px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+
+    .guard{background:#fdf6ec;border:1px solid #EBD8B4;border-radius:16px;padding:24px 28px}
+    .guard .lbl{color:#9A6A12}.guard .lbl::before{background:#C98A1E}
+    .guard ul.clean li::before{background:#B23A48}
+
+    ol.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+    ol.steps li{counter-increment:s;position:relative;padding:12px 0 12px 46px;border-top:1px solid var(--line);font-size:15.5px}
+    ol.steps li:first-child{border-top:none}
+    ol.steps li::before{content:counter(s);position:absolute;left:0;top:12px;width:28px;height:28px;
+      border-radius:8px;background:var(--navy);color:#fff;font-family:var(--sans);font-weight:800;
+      font-size:14px;display:grid;place-items:center}
+    ol.steps b{color:var(--navy)}
+
+    footer{background:var(--navy-deep);color:#A9B6CB;text-align:center;padding:24px;font-size:13.5px}
+    footer b{color:#F3EFE8}
+    .nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+    .nav a{font-size:13px;font-weight:700;color:var(--gold-lt);border:1px solid rgba(240,207,122,.3);
+      border-radius:999px;padding:6px 14px;text-decoration:none}
+
+    @media(max-width:720px){
+      .pillars,.weeks,.cols{grid-template-columns:1fr}
+    }
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  </style>
+</head>
+<body>
+
+  <header class="cover">
+    <div class="wrap">
+      <p class="lbl">Instagram Launch Plan</p>
+      <h1>Launch it right, <i>without burning out.</i></h1>
+      <p class="sub">A realistic, week-by-week plan to launch and grow an authentic OB-GYN + mom + NHSC-scholar account &mdash; built around a busy clinical life.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section>
+      <div class="head"><p class="lbl">Positioning</p><h2>Say this in one breath</h2></div>
+      <p class="quote">Board-certified OB-GYN, boy-mom of two, and NHSC scholar sharing the real story of medicine, motherhood, and how she got here &mdash; the honest, funny, and useful version.</p>
+      <div class="cols" style="margin-top:26px">
+        <ul class="clean">
+          <li><b>Niche:</b> women's health + the doctor-mom life + "the path here."</li>
+          <li><b>Promise:</b> "I'll answer what you're too afraid to Google."</li>
+        </ul>
+        <ul class="clean">
+          <li><b>Voice:</b> warm, funny, self-deprecating, credible.</li>
+          <li><b>Edge:</b> a <i>real</i> board-certified physician + the NHSC story almost nobody explains.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Cadence</p><h2>This is the whole game</h2>
+        <p>Consistency beats volume. Never disappear for a week &mdash; the algorithm punishes gaps harder than a lighter cadence.</p></div>
+      <div class="callout">
+        <h3>3 posts / week &middot; Mon &middot; Wed &middot; Fri</h3>
+        <p><span class="em">Batch-film once a week</span> (record 4&ndash;6 clips in one 60&ndash;90 min session), <span class="em">schedule the whole week in advance</span>, and keep <span class="em">Stories going 2&ndash;4&times;/week</span>. If 3/week ever feels heavy, drop to 2 before you drop quality.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Content pillars</p><h2>Every post fits one of four</h2>
+        <p>Rotate these and keep a running idea bank so batch days are never "what do I film?"</p></div>
+      <div class="pillars">
+        <div class="pillar"><div class="top"><h3>&#127891; The Path</h3><span class="pct">25%</span></div><p>NHSC story, pre-med &rarr; boards, money/loans reality, "things I wish I knew."</p></div>
+        <div class="pillar"><div class="top"><h3>&#129658; Women's Health, Demystified</h3><span class="pct">30%</span></div><p>Myth-busting, "is this normal?", pregnancy/gyn explainers, "3 signs to call your OB."</p></div>
+        <div class="pillar"><div class="top"><h3>&#128118; Doctor-Mom Real Life</h3><span class="pct">25%</span></div><p>R&eacute;sum&eacute;-vs-reality, mom chaos, work-life honesty, empathy from being a patient too.</p></div>
+        <div class="pillar"><div class="top"><h3>&#128172; Q&amp;A / Community</h3><span class="pct">20%</span></div><p>"Afraid to Google" answers, AMA recaps, replying to comments as Reels.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Phase 0 &middot; Days 1&ndash;3</p><h2>Profile setup (no filming yet)</h2>
+        <p>Tap an item to check it off.</p></div>
+      <ul class="check" id="setup">
+        <li><span class="box"></span><span class="txt"><b>Lock one handle everywhere:</b> <span class="mono-inline">@drbayanabunar</span> on IG, TikTok, YouTube (matches the website).</span></li>
+        <li><span class="box"></span><span class="txt"><b>Switch to a Creator account</b> (free; unlocks insights + scheduling).</span></li>
+        <li><span class="box"></span><span class="txt"><b>Profile photo:</b> clean headshot on a navy/neutral background &mdash; same photo everywhere.</span></li>
+        <li><span class="box"></span><span class="txt"><b>Name field</b> (searchable SEO line): <span class="mono-inline">Bayan Abunar, MD | OB-GYN</span>.</span></li>
+        <li><span class="box"></span><span class="txt"><b>Bio:</b> OB-GYN | Boy Mom x2 &#129430;&#129430; | NHSC Scholar &#127891; / Real talk on medicine, motherhood &amp; the path here &#11015;&#65039;</span></li>
+        <li><span class="box"></span><span class="txt"><b>Link in bio &rarr; DrBayanAbunar.com</b> (the site is the hub &mdash; more credible than Linktree).</span></li>
+        <li><span class="box"></span><span class="txt"><b>Reserve 4 Highlight covers</b> (navy + gold): My Story &middot; Day in Life &middot; Q&amp;A &middot; NHSC.</span></li>
+        <li><span class="box"></span><span class="txt"><b>Write 15 post ideas</b> into an idea bank.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Phase 1 &middot; Days 4&ndash;7</p><h2>Batch your first week</h2></div>
+      <ul class="check" id="batch">
+        <li><span class="box"></span><span class="txt"><b>Film the first 4 Reels</b> in one session (Week 1 scripts below). Change tops between clips so they look filmed on different days.</span></li>
+        <li><span class="box"></span><span class="txt"><b>Edit + caption</b> (CapCut/Submagic): strong hook in first 1&ndash;2s, captions on, custom cover.</span></li>
+        <li><span class="box"></span><span class="txt"><b>Schedule Mon/Wed/Fri</b> via Meta Business Suite (free).</span></li>
+        <li><span class="box"></span><span class="txt"><b>Post 3&ndash;5 Reels before announcing</b> &mdash; so new visitors land on a real feed, not an empty one.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">The first 30 days</p><h2>Day-by-day &middot; Mon / Wed / Fri</h2>
+        <p>Each posting day has a specific Reel; Stories fill the gaps.</p></div>
+      <div class="weeks">
+        <div class="week">
+          <div class="theme">Week 1 &middot; "Who is this?"</div>
+          <div class="post"><div class="day">Mon</div><div class="p"><b>The intro.</b> "I have a medical degree and I still can't find my phone" &rarr; who she is, r&eacute;sum&eacute; vs. real life.</div></div>
+          <div class="post"><div class="day">Wed</div><div class="p"><b>The NHSC story.</b> "I got medical school paid for &mdash; here's the catch." High save/share.</div></div>
+          <div class="post"><div class="day">Fri</div><div class="p"><b>Myth-bust.</b> "No, you don't need a pap every single year &mdash; here's the guideline."</div></div>
+          <div class="story"><b>Stories:</b> intro poll, a behind-the-scenes scrubs shot.</div>
+        </div>
+        <div class="week">
+          <div class="theme">Week 2 &middot; "Helpful + funny"</div>
+          <div class="post"><div class="day">Mon</div><div class="p"><b>R&eacute;sum&eacute; vs. real life.</b> "By day: delivering babies. By night: negotiating bedtime with a 4-year-old supervisor."</div></div>
+          <div class="post"><div class="day">Wed</div><div class="p"><b>Afraid to Google (Pt 1).</b> 3 quick, common women's-health questions. Series potential.</div></div>
+          <div class="post"><div class="day">Fri</div><div class="p"><b>Day in the life.</b> A call or clinic day, honest &mdash; the good and the exhausting.</div></div>
+          <div class="story"><b>Stories:</b> Q&amp;A sticker &rarr; save answers for a future Reel.</div>
+        </div>
+        <div class="week">
+          <div class="theme">Week 3 &middot; "I trust her"</div>
+          <div class="post"><div class="day">Mon</div><div class="p"><b>The path.</b> Pre-med &rarr; med school &rarr; residency &rarr; boards in 45 seconds.</div></div>
+          <div class="post"><div class="day">Wed</div><div class="p"><b>Educational.</b> "3 signs you should actually call your OB." Screenshot-worthy.</div></div>
+          <div class="post"><div class="day">Fri</div><div class="p"><b>Trend/lighthearted.</b> Trending audio with an OB-GYN or mom twist.</div></div>
+          <div class="story"><b>Stories:</b> re-share a funny comment; "this or that" polls.</div>
+        </div>
+        <div class="week">
+          <div class="theme">Week 4 &middot; "Follow forever"</div>
+          <div class="post"><div class="day">Mon</div><div class="p"><b>Q&amp;A recap Reel.</b> Answer the best story-sticker questions on camera.</div></div>
+          <div class="post"><div class="day">Wed</div><div class="p"><b>NHSC / service angle.</b> Why underserved-community care matters. Mission = loyal audience.</div></div>
+          <div class="post"><div class="day">Fri</div><div class="p"><b>"Ask me anything."</b> Invite questions in comments &rarr; seeds an ongoing series.</div></div>
+          <div class="story"><b>Stories:</b> "we made it a month &mdash; thank you," tease month 2.</div>
+        </div>
+      </div>
+      <p style="margin-top:20px;color:var(--slate);font-size:15px"><b style="color:var(--navy)">After Day 30:</b> keep the rhythm, double down on the best-performing pillar, and turn your 2&ndash;3 best posts into a repeatable <b style="color:var(--navy)">series</b> &mdash; the fastest way to convert viewers into followers.</p>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Growth mechanics</p><h2>Do these, skip the gimmicks</h2></div>
+      <div class="cols">
+        <ul class="clean">
+          <li><b>Hook in the first 1&ndash;2 seconds</b> (on-screen + spoken). This is 80% of performance.</li>
+          <li><b>Captions always on</b> &mdash; most viewers are muted.</li>
+          <li><b>Search-optimize:</b> real keywords in audio, on-screen text, and caption.</li>
+          <li><b>3&ndash;5 specific hashtags</b> (#obgyn #womenshealth #medmom #nhsc), not 30.</li>
+        </ul>
+        <ul class="clean">
+          <li><b>Engage the first 30&ndash;60 min</b> after posting &mdash; reply to every comment.</li>
+          <li><b>Reply to comments as Reels</b> &mdash; free content that rewards commenters.</li>
+          <li><b>Consistency &gt; perfection.</b></li>
+          <li><b>Best times</b> (2026 data): Wed ~12pm/6pm &mdash; but trust her own Insights after 2&ndash;3 weeks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Non-negotiable</p><h2>Medical-creator guardrails</h2></div>
+      <div class="guard">
+        <p class="lbl">Protect the license &amp; the trust</p>
+        <ul class="clean" style="margin-top:14px">
+          <li><b>Never film or reference identifiable patients / PHI</b> &mdash; no charts, screens, or faces in the background.</li>
+          <li><b>Add "educational, not medical advice &mdash; talk to your own doctor"</b> on anything clinical.</li>
+          <li><b>Stay in her lane</b> and cite guidelines (ACOG etc.) where relevant.</li>
+          <li><b>Check her employer's social-media policy</b>; don't imply institutional endorsement.</li>
+          <li><b>Don't over-automate the voice</b> &mdash; authenticity is the entire moat for a physician.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section style="border-bottom:none">
+      <div class="head"><p class="lbl">What "working" looks like</p><h2>Metrics, in order of importance</h2></div>
+      <ol class="steps">
+        <li><b>Follower growth trend</b> (not the absolute number early on).</li>
+        <li><b>Saves + shares</b> &mdash; the signals that actually drive reach.</li>
+        <li><b>Watch-through / retention</b> &mdash; are people watching past the hook?</li>
+        <li><b>Comments</b> &mdash; community = durability.</li>
+        <li><b>Likes</b> are the <i>least</i> important. Don't optimize for them.</li>
+      </ol>
+      <p style="margin-top:18px;color:var(--slate);font-size:15px">Review monthly: which pillar and hook style performed best &rarr; make more of that.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><b>Dr. Bayan Abunar</b> &nbsp;·&nbsp; Instagram Launch Plan v1</p>
+    <div class="nav" style="justify-content:center">
+      <a href="brand-guide.html">Brand Guide</a>
+      <a href="automation-toolkit.html">Automation Toolkit</a>
+      <a href="reel-kit.html">Reel Kit</a>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      document.querySelectorAll(".check li").forEach(function(li){
+        li.addEventListener("click",function(){ li.classList.toggle("done"); });
+        li.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){e.preventDefault();li.classList.toggle("done");} });
+        li.tabIndex=0;
+      });
+    })();
+  </script>
+</body>
+</html>

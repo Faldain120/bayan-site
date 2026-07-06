@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Automation & AI Toolkit — Dr. Bayan Abunar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0B2545; --navy-deep:#081A33; --gold:#D4A537; --gold-txt:#916E1C;
+      --gold-lt:#F0CF7A; --cream:#FAF8F4; --pale:#EEF1F7; --ink:#14233A;
+      --slate:#6B7484; --line:#DFE3EC; --line-strong:#CFD5E1;
+      --serif:"Fraunces",Georgia,serif; --sans:"Mulish",system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);
+      font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:960px;margin-inline:auto;padding-inline:clamp(20px,5vw,44px)}
+    h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;margin:0;letter-spacing:-.01em}
+    p{margin:0}
+    a{color:var(--gold-txt)}
+    .lbl{font-weight:800;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-txt);
+      display:inline-flex;align-items:center;gap:10px}
+    .lbl::before{content:"";width:26px;height:1.5px;background:var(--gold)}
+
+    .cover{background:var(--navy);color:#F3EFE8;position:relative;overflow:hidden}
+    .cover::after{content:"";position:absolute;right:-10%;top:-40%;width:60%;height:180%;
+      background:radial-gradient(closest-side,rgba(240,207,122,.2),transparent);pointer-events:none}
+    .cover .wrap{padding-block:clamp(46px,7vw,80px);position:relative;z-index:1}
+    .cover .lbl{color:var(--gold-lt)}.cover .lbl::before{background:var(--gold)}
+    .cover h1{font-size:clamp(30px,5vw,50px);color:#fff;margin:12px 0 16px}
+    .cover h1 i{color:var(--gold-lt);font-weight:400}
+    .cover .sub{font-size:clamp(17px,2.2vw,20px);color:#C9D3E4;max-width:58ch}
+
+    section{padding-block:clamp(36px,5.5vw,60px);border-bottom:1px solid var(--line)}
+    .head{margin-bottom:24px}
+    .head h2{font-size:clamp(24px,3.6vw,34px);margin-top:12px}
+    .head p{color:var(--slate);margin-top:8px;max-width:64ch}
+
+    .callout{background:var(--pale);border-radius:14px;padding:22px 26px;border:1px solid var(--line)}
+    .callout p{color:var(--ink)}
+    .callout .em{color:var(--gold-txt);font-weight:700}
+
+    /* pipeline */
+    .flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+    .flow .chip{background:#fff;border:1px solid var(--line-strong);border-radius:999px;
+      padding:10px 16px;font-weight:700;font-size:14px;color:var(--navy)}
+    .flow .arr{color:var(--gold);font-weight:800;font-size:16px}
+
+    /* tables */
+    .scroll{overflow-x:auto}
+    .tbl{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+    .tbl th,.tbl td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+    .tbl th{font-family:var(--sans);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate)}
+    .tbl td:first-child{font-weight:700;color:var(--navy);white-space:nowrap}
+    .tbl tr:last-child td{border-bottom:none}
+    .tbl .price{font-variant-numeric:tabular-nums;color:var(--slate);white-space:nowrap}
+    .rec td{background:#fbf6ea}
+    .pin{display:inline-block;background:var(--gold);color:#241a06;font-weight:800;font-size:11px;
+      border-radius:5px;padding:2px 7px;margin-right:6px;white-space:nowrap}
+
+    ul.clean{list-style:none;margin:0;padding:0}
+    ul.clean li{padding:9px 0 9px 26px;position:relative;font-size:15.5px}
+    ul.clean li::before{content:"";position:absolute;left:0;top:17px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+    .cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+
+    .guard{background:#fdf1f2;border:1px solid #EBC7CC;border-radius:16px;padding:24px 28px}
+    .guard .lbl{color:#A2313E}.guard .lbl::before{background:#B23A48}
+    .guard ul.clean li::before{content:"\00d7";background:none;color:#B23A48;font-weight:800;font-size:18px;top:8px;width:auto;height:auto}
+
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+    .card h3{font-size:17px;margin-bottom:6px}
+    .card p{color:var(--slate);font-size:14.5px}
+    .card .tool{color:var(--gold-txt);font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+
+    ol.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+    ol.steps li{counter-increment:s;position:relative;padding:12px 0 12px 46px;border-top:1px solid var(--line);font-size:15.5px}
+    ol.steps li:first-child{border-top:none}
+    ol.steps li::before{content:counter(s);position:absolute;left:0;top:12px;width:28px;height:28px;
+      border-radius:8px;background:var(--navy);color:#fff;font-family:var(--sans);font-weight:800;font-size:14px;display:grid;place-items:center}
+    ol.steps b{color:var(--navy)}
+    .free-badge{display:inline-block;background:var(--navy);color:var(--gold-lt);font-weight:800;
+      font-size:13px;border-radius:999px;padding:6px 16px;margin-top:16px}
+
+    .srcs{font-size:13px;color:var(--slate);line-height:1.9}
+    footer{background:var(--navy-deep);color:#A9B6CB;text-align:center;padding:24px;font-size:13.5px}
+    footer b{color:#F3EFE8}
+    .nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;justify-content:center}
+    .nav a{font-size:13px;font-weight:700;color:var(--gold-lt);border:1px solid rgba(240,207,122,.3);border-radius:999px;padding:6px 14px;text-decoration:none}
+
+    @media(max-width:720px){.cols,.cards{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  </style>
+</head>
+<body>
+
+  <header class="cover">
+    <div class="wrap">
+      <p class="lbl">Automation &amp; AI Toolkit</p>
+      <h1>Remove the friction, <i>not the person.</i></h1>
+      <p class="sub">You can automate ~70% of the busywork &mdash; editing, captions, scheduling, posting &mdash; but not the taste. For a physician, the authentic layer <i>is</i> the brand.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section>
+      <div class="head"><p class="lbl">The pipeline</p><h2>How it fits together</h2>
+        <p>She films; the tools handle the rest. Don't chase AI-avatar or faceless tools &mdash; they'd nuke the trust that makes a doctor-creator work.</p></div>
+      <div class="flow">
+        <span class="chip">Batch-film (~90 min/wk)</span><span class="arr">&rarr;</span>
+        <span class="chip">AI edit + auto-caption</span><span class="arr">&rarr;</span>
+        <span class="chip">Captions/hooks (she edits)</span><span class="arr">&rarr;</span>
+        <span class="chip">Schedule the week</span><span class="arr">&rarr;</span>
+        <span class="chip">Auto-publish M/W/F</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Editing + captions</p><h2>The biggest time-sink &rarr; biggest win</h2>
+        <p>Most people watch on mute, so captions are non-negotiable and auto-editing removes the tedium.</p></div>
+      <div class="scroll"><table class="tbl">
+        <thead><tr><th>Tool</th><th>Best at</th><th>Price (2026)</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr class="rec"><td>CapCut</td><td>Auto-captions, cuts, templates, trending audio</td><td class="price">Free</td><td><span class="pin">Start here</span>Free desktop, no watermark, does 90%.</td></tr>
+          <tr><td>Submagic</td><td>Animated word-by-word captions + 1-click auto-edit</td><td class="price">~$16&ndash;24/mo</td><td>Best upgrade when captions are the bottleneck.</td></tr>
+          <tr><td>Descript</td><td>Edit by transcript; delete filler words + silence</td><td class="price">~$12&ndash;24/mo</td><td>Great for her talking-head style.</td></tr>
+          <tr><td>VEED</td><td>Browser-based; top caption accuracy</td><td class="price">~$18/mo</td><td>Good for accurate medical-term transcription.</td></tr>
+        </tbody>
+      </table></div>
+      <p style="margin-top:14px;color:var(--slate);font-size:14.5px"><b style="color:var(--navy)">Pick:</b> CapCut (free) &rarr; add <b style="color:var(--navy)">Submagic</b> when she wants animated captions. Never pay for two caption tools.</p>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Scheduling + auto-posting</p><h2>Protect the streak on a busy week</h2>
+        <p>Two 2026 facts: Instagram now allows scheduling on public accounts, and scheduled posts don't hurt reach.</p></div>
+      <div class="scroll"><table class="tbl">
+        <thead><tr><th>Tool</th><th>Auto-publishes Reels?</th><th>Price (2026)</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr class="rec"><td>Meta Business Suite</td><td>Yes (native, 75 days out)</td><td class="price">Free</td><td><span class="pin">Start here</span>First-party, reliable, IG + FB.</td></tr>
+          <tr><td>Metricool</td><td>Yes + trending-audio + analytics</td><td class="price">Free &rarr; paid</td><td>Best free-to-paid upgrade for analytics.</td></tr>
+          <tr><td>Later</td><td>Yes; visual grid planner</td><td class="price">~$18&ndash;25/mo</td><td>If she wants to see the feed aesthetic first.</td></tr>
+          <tr><td>Buffer</td><td>Reels sometimes push-notify only</td><td class="price">$6/channel</td><td>Simple, but verify Reels auto-publish first.</td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout" style="margin-top:16px"><p>&#9888;&#65039; <span class="em">Avoid browser-extension / unofficial schedulers</span> &mdash; Instagram's anti-bot detection makes them risky for the account. All four above use the official API.</p></div>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Repurposing &amp; ideas</p><h2>Only when she needs it</h2></div>
+      <div class="cards">
+        <div class="card"><div class="tool">Opus Clip / Klap</div><h3>Long &rarr; short clips</h3><p><b>Skip for now.</b> She films short Reels directly. Revisit only if she starts a podcast or YouTube (~$14&ndash;29/mo).</p></div>
+        <div class="card"><div class="tool">ChatGPT / Claude</div><h3>Hooks &amp; captions</h3><p>Brainstorm hooks, draft captions &mdash; she always edits to sound like her. Add Flick (~$14/mo) only if hashtags become a time-sink.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">Hard limits</p><h2>What NOT to automate (for a physician)</h2></div>
+      <div class="guard">
+        <p class="lbl">These break trust</p>
+        <ul class="clean" style="margin-top:14px">
+          <li><b>AI avatars / voice clones / faceless content</b> &mdash; the opposite of what a doctor-creator needs.</li>
+          <li><b>Auto-generated medical "facts"</b> &mdash; anything clinical must be her verified knowledge.</li>
+          <li><b>Robotic auto-DM / auto-comment bots</b> &mdash; real replies build the early community (bots are bannable).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><p class="lbl">In-house edge</p><h2>Built with what Justin already has</h2>
+        <p>The branded parts can be done in-house for free, so her Reels look unmistakably hers.</p></div>
+      <div class="cards">
+        <div class="card"><div class="tool">HyperFrames</div><h3>Branded intro / outro + captions</h3><p>A reusable navy/gold sting + caption style she drops on every Reel &mdash; consistency generic tools can't match.</p></div>
+        <div class="card"><div class="tool">video-use</div><h3>Auto-cut raw footage</h3><p>Transcribe, cut dead takes, and burn on-brand subtitles from a messy batch-film &mdash; no manual timeline.</p></div>
+        <div class="card"><div class="tool">media-gen</div><h3>On-brand covers</h3><p>Generate navy/gold thumbnails and the occasional b-roll accent without stock sites.</p></div>
+        <div class="card"><div class="tool">The split</div><h3>Self-sufficient + polished</h3><p>Bayan runs CapCut + Meta Suite day-to-day; Justin builds the reusable branded template once.</p></div>
+      </div>
+    </section>
+
+    <section style="border-bottom:none">
+      <div class="head"><p class="lbl">Recommended</p><h2>Set this up first</h2></div>
+      <ol class="steps">
+        <li><b>CapCut</b> (free) &mdash; edit + auto-caption</li>
+        <li><b>Meta Business Suite</b> (free) &mdash; schedule + auto-publish Mon/Wed/Fri</li>
+        <li><b>ChatGPT / Claude</b> (already have) &mdash; hooks + captions</li>
+        <li><b>HyperFrames branded intro/outro</b> (in-house, one-time) &mdash; brand polish</li>
+        <li><i>Later, when earned:</i> Submagic (captions) + Metricool (analytics). Opus Clip only if she goes long-form.</li>
+      </ol>
+      <span class="free-badge">Total cost to launch: $0</span>
+      <p class="srcs" style="margin-top:26px"><b>Sources (verified 2026-07-06):</b>
+        <a href="https://boosend.ai/blog/best-instagram-ai-tools-2026">BooSend</a> &middot;
+        <a href="https://creatorflow.so/blog/how-to-schedule-instagram-posts">CreatorFlow (scheduling)</a> &middot;
+        <a href="https://www.shortsync.app/resources/instagram-scheduling-tools-comparison-2026">ShortSync</a> &middot;
+        <a href="https://posteverywhere.ai/blog/best-tools-for-scheduling-instagram-reels">PostEverywhere</a> &middot;
+        <a href="https://blitzcutai.com/blog/ai-video-editing-software">Blitzcut</a> &middot;
+        <a href="https://hyzenpro.com/submagic-vs-veed-io-vs-captions-ai-the-ultimate-ai-caption-tool-showdown-2026/">HyzenPro (captions)</a> &middot;
+        <a href="https://bigvu.tv/blog/opus-clips-worth-the-hype">BIGVU (Opus Clip)</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><b>Dr. Bayan Abunar</b> &nbsp;·&nbsp; Automation &amp; AI Toolkit v1</p>
+    <div class="nav">
+      <a href="brand-guide.html">Brand Guide</a>
+      <a href="launch-plan.html">Launch Plan</a>
+      <a href="reel-kit.html">Reel Kit</a>
+    </div>
+  </footer>
+
+</body>
+</html>
